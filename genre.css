@@ -1,0 +1,233 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(img/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* height: 100vh; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow:scroll;
+    background-color: #f7efef38;
+}
+
+        .genre {
+            cursor: pointer;
+            color: #ffffff;
+            margin-right: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            box-sizing: border-box;
+            box-shadow: #0f0f0f;
+            transition: all 0.3s;
+            
+        }
+        .genre:hover{
+            border-color:rgba(0, 0, 0, 0.736);
+            transition: cubic-bezier();
+            transform: scale(1.1);
+            transition: all 0.3s;
+
+        
+        }
+        #genresList{
+
+            gap:1rem;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        .Parent{
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+             gap:2rem;
+             margin-bottom: 7rem;
+        }
+        .movie img {
+         width:50%;
+              }
+              .movie{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            row-gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset;
+        }
+        .GenreName{
+            width:100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+       #GenreName{
+        display: none;
+        width: 20%;
+        justify-content: center;
+        
+        background-origin: padding-box;
+        border: 2px solid black;
+
+       }
+       .navbar a{
+        color: var(--bg-color);
+        font-size: var(--p-font);
+        font-weight: 500;
+        padding: 10px 22px;
+        border-radius: 4px;
+        transition: ease .40s;
+    }
+    .navbar a:hover{
+        background: var(--bg-color);
+        color: var(--text-color);
+        box-shadow: 5px 5px 5px rgb(85 85 85 / 20%);
+        border-radius: 4px;
+        
+    }
+    
+     
+
+.navbar a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+}
+.navbar a:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 5px 5px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+    
+}
+
+ .navbar{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 600;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #670000;
+ }
+
+ .navbar ul{
+  display: flex;
+  justify-content: center;
+ }
+
+ .navbar ul li{
+list-style: none;
+margin: 10px 23px;
+
+
+ }
+
+ .navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+     }
+
+.navbar ul li a:hover{
+    text-decoration: none;
+    color:#ffffff;
+    
+  
+    border: #7a0303;
+ }
+
+
+ .left img{
+    width:35%;
+    margin-left: 2rem; ;
+    border-radius:35%;
+   }
+   .left img:hover{
+    transform: scale(1.1);
+    transition: .3s;
+
+   }
+
+.Slider{
+    position:absolute;
+   
+}
+
+.NvbarDiv{
+    width: 100%;
+}
+
+.add-to-favorites
+{
+    padding: 5px ;
+    margin: 4px ;
+}
+
+.add-to-favorites:hover
+{
+    padding: 5px ;
+    margin: 4px ;
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover); 
+    box-shadow: 1px 1px 5px wheat,-1px -1px 5px wheat;
+}
+
+footer {
+    background-color: #5b0b0bcc;
+    color: #dcbfbf;
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+   bottom: 0%;
+
+  }
+
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+    
+  
+  }
+
+  .contact-person {
+    margin: 0 20px;
+    border-right: 1rem;
+    justify-content: right;
+    border-left: #0d0e0e;
+    
+  }
+  .contact-person h3 {
+    margin-bottom: 0 20px ;
+    border-right: #0d0e0e;
+    justify-content: left;
+    
+  }
+
+
+
+

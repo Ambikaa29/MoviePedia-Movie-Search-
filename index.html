@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Moviepedia</title>
+
+    
+            <nav class="navbar">
+        
+                <div class="left"> <img src="./img/logo1.jpg"/> 
+                </div> 
+                    <div class="right">
+              <ul>
+                <li>
+                    <a href = "index.html" ><h4>Home</h4></a>
+        
+                </li>
+                <li>
+                    <a href = "genre.html" ><h4>Genre</h4></a>
+        
+                </li>
+                <li>
+                    <a href = "search.html" ><h4>Search</h4></a>
+        
+                </li>
+                  <li>
+                      <a href = "aboutus.html" ><h4>About Us</h4></a>
+          
+                  </li>
+                  <li>
+                    <a href = "favoritelist.html" ><h4>Favourite</h4></a>
+        
+                </li>
+                
+                <li>
+                  <a href="signup.html" id="signupLink"><h4>SignUp</h4></a>
+                  
+                  <a  id="logoutLink" style="display: none;"><h4 onclick="ClearUser()" class="logout">Logout</h4></a>
+                </li>
+                  
+              </ul>
+            </div>
+          </nav>
+        
+    </head> 
+    <body>
+
+     <div class="Slider">
+        
+    <div class ="content">
+        <span style="--i:1;">
+           <a href="genre.html"><img src="img/batman2.jpg" alt="alterernate"></a> 
+        </span>
+        <span style="--i:2;">
+            <a href="genre.html"><img src="img/topgun.jpg" alt="alterernate2" ></a>
+        </span>
+        <span style="--i:3;">
+            <a href="genre.html"><img src="img/Jhon Wick.jpg" alt="alterernate3" ></a>
+        </span>
+        <span style="--i:4;">
+            <a href="genre.html"><img src="img/boys_xlg.jpg" alt="alterernate4" ></a>
+        </span>
+        <span style="--i:5;">
+            <a href="genre.html"><img src="img/money heist2.webp" alt="alterernate4"></a>
+        </span>
+        <span style="--i:6;">
+            <a href="genre.html"><img src="img/moon knight1.jpg" alt="alterernate4"></a>
+        </span>
+        <span style="--i:7;">
+            <a href="genre.html"></a> <img src="img/annabelle-comes-home-movie-poster.jpg" alt="alterernate4" ></a>
+        </span>
+        <span style="--i:8;">
+            <a href="genre.html"><img src="img/wednesday2.jpg" alt="alterernate4"></a>
+        </span>
+    </div>
+  
+</div>
+
+<div class="MenuitemParent">
+
+    <section id="featured-movies" class="featured-movies">
+        <h1>Featured Movies</h1>
+    </section>
+
+    <div class="carousel">
+        <div class="menu-items">
+
+        <div class="item">
+          <img src="img/oppenheimer3.jpg" >
+          <h3> Oppenheimer</h3>
+          <p>The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+          <button class="Add-to-favorites" id="btn1" data-name="movie"  onclick="Add('btn1')">Add to Favorites</button>
+        </div>
+
+        <div class="item">
+          <img src="img/alien2.jpg" >
+          <h3>Alien</h3>
+          <p>The crew of a commercial spacecraft encounters a deadly lifeform after investigating a mysterious transmission of unknown origin.</p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add('btn2')">Add to Favorites</button>
+        </div>
+
+        <div class="item">
+            <img src="img/12thfail.jpg" >
+            <h3>12th Fail</h3>
+            <p>The real-life story of IPS Officer Manoj Kumar Sharma who overcame poverty and cheating to become an IPS officer.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add('btn3')">Add to Favorites</button>
+          </div>
+        
+          <div class="item">
+            <img src="img/interstellar3.jpg" >
+            <h3>Interstellar</h3>
+            <p>When Earth becomes uninhabitable in the future,a farmer and ex-NASA pilot, Joseph Cooper, to find a new planet for humans.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/Jurassic Park.webp" >
+            <h3>Jurassic Park </h3>
+            <p>Scientists and tourists trapped on an island overrun by genetically engineered dinosaurs.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/Avatar.webp" >
+            <h3>Avatar </h3>
+            <p>A visually stunning sci-fi adventure set on an alien planet.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/Gravity.webp" >
+            <h3>Gravity</h3>
+            <p>A visually stunning sci-fi thriller set in outer space.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/The Wolf of Wall Street.webp" >
+            <h3>The Wolf of Wall Street  </h3>
+            <p>A black comedy based on the true story of stockbroker Jordan Belfort.</p>
+            <button class="Add-to-favorites" data-name="movie" >Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/starwars.webp" >
+            <h3>Star Wars </h3>
+            <p> Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station while also attempting to rescue Princess Leia from the mysterious Darth Vader.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/The Godfather.webp" >
+            <h3>The Godfather</h3>
+            <p>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+  
+        </div>
+        <button class="carousel-prev">&lt;</button>
+        <button class="carousel-next">&gt;</button>
+    </div>
+   
+
+    <section id="featured-movies" class="featured-movies">
+        <h1>Top Recommended</h1>
+    </section>
+
+
+    <div class="carousel2">
+      <div class="menu-items2">
+        <div class="item">
+          <img src="img/Forrest Gump.webp" >
+          <h3>Forrest Gump</h3>
+          <p> The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.
+          </p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+        <div class="item">
+          <img src="img/La La Land.webp" >
+          <h3>La La Land</h3>
+          <p>A romantic musical set in modern-day Los Angeles.
+            
+          </p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+      
+      
+        <div class="item">
+          <img src="img/3 Idiots.webp" >
+          <h3>3 Idiots </h3>
+          <p>A comedy-drama about three engineering students and their unconventional approach to education.</p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+
+        <div class="item">
+          <img src="img/Mad Max.webp" >
+          <h3>Mad Max: Fury Road</h3>
+          <p>An adrenaline-fueled action film set in a post-apocalyptic world.</p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+        <div class="item">
+          <img src="img/Titanic.webp" >
+          <h3>Titanic</h3>
+          <p>A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</p>
+          <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+       
+        
+        <div class="item">
+        <img src="img/The Lord of the Rings.webp" >
+        <h3>The Lord of the Rings</h3>
+        <p>A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.</p>
+        <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+        </div>
+       
+          <div class="item">
+            <img src="img/Black Panther.webp" >
+            <h3>Black Panther</h3>
+            <p>A groundbreaking superhero film featuring Marvel's first black superhero.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/The Shawshank Redemption.webp" >
+            <h3> The Shawshank Redemption</h3>
+            <p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/The Matrix.webp" >
+            <h3> The Matrix</h3>
+            <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+          <div class="item">
+            <img src="img/The Dark Knight.webp" >
+            <h3> The Dark Knight</h3>
+            <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</p>
+            <button class="Add-to-favorites" data-name="movie"  onclick="Add()">Add to Favorites</button>
+          </div>
+      </div>
+      <button class="carousel-prev2">&lt;</button>
+      <button class="carousel-next2">&gt;</button>
+  </div>
+  <footer>
+    <div class="fcontainer">
+        <div class="contact-info">
+            <div class="contact-person">
+                <h3>For more projects and enquiries:</h3>
+                <p>Email: tommaranshul300@gmail.com</p>
+                <a href="https://www.linkedin.com/in/anshul-tomar-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> linkedin: Anshul</a>
+                <p>Phone: 99770359878 </p>
+            </div>
+            <div class="contact-person">
+                <h3>For more projects and promotions:</h3>
+                <p>Email: ambikachaudhary29@gmail.com</p>
+                <a href="https://www.linkedin.com/in/ambika-choudhary-619964277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> linkedin: Ambika</a>
+                <p>Phone: 7879456368 </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+    
+  document.addEventListener('DOMContentLoaded', function() {
+
+  const carousel = document.querySelector('.carousel');
+  const menuItems = carousel.querySelector('.menu-items');
+  const prevButton = carousel.querySelector('.carousel-prev');
+  const nextButton = carousel.querySelector('.carousel-next');
+
+  const itemWidth = 400; // Width of each item in the carousel
+  let currentPosition = 0; // Initial position of the carousel
+
+  // Function to move the carousel to the specified position
+  function moveCarousel(position) {
+    console.log("run")
+      menuItems.style.transform = `translateX(${position}px)`;
+  }
+
+  // Event listener for the previous button
+  prevButton.addEventListener('click', function() {
+    console.log("running")
+      if (currentPosition < 0) {
+          currentPosition += itemWidth;
+          moveCarousel(currentPosition);
+      }
+  });
+
+  // Event listener for the next button
+  nextButton.addEventListener('click', function() {
+    console.log("running")
+      const maxPosition = -(menuItems.scrollWidth - carousel.offsetWidth);
+      if (currentPosition > maxPosition) {
+          currentPosition -= itemWidth;
+          moveCarousel(currentPosition);
+      }
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+const carousel = document.querySelector('.carousel2');
+const menuItems = carousel.querySelector('.menu-items2');
+const prevButton = carousel.querySelector('.carousel-prev2');
+const nextButton = carousel.querySelector('.carousel-next2');
+
+const itemWidth = 400; // Width of each item in the carousel
+let currentPosition = 0; // Initial position of the carousel
+
+// Function to move the carousel to the specified position
+function moveCarousel(position) {
+  console.log("run")
+    menuItems.style.transform = `translateX(${position}px)`;
+}
+
+// Event listener for the previous button
+prevButton.addEventListener('click', function() {
+  console.log("running")
+    if (currentPosition < 0) {
+        currentPosition += itemWidth;
+        moveCarousel(currentPosition);
+    }
+});
+
+// Event listener for the next button
+nextButton.addEventListener('click', function() {
+  console.log("running")
+    const maxPosition = -(menuItems.scrollWidth - carousel.offsetWidth);
+    if (currentPosition > maxPosition) {
+        currentPosition -= itemWidth;
+        moveCarousel(currentPosition);
+    }
+});
+});
+// Function to save item data to localStorage
+// Function to save item data to localStorage
+function saveToFavorites(itemTitle, itemDescription) {
+  console.log("iu")
+    // Check if localStorage is supported by the browser
+    if (typeof(Storage) !== "undefined") {
+        // Retrieve existing favorites or initialize an empty array
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+        // Check if the item title already exists in favorites
+        const existingFavorite = favorites.find(favorite => favorite.title === itemTitle);
+        if (!existingFavorite) {
+            // Create an object with item data
+            let itemData = {
+                title: itemTitle,
+                description: itemDescription
+            };
+
+            // Push the item data to the favorites array
+            favorites.push(itemData);
+
+            // Save the updated favorites array back to localStorage
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+
+            // Provide feedback to the user that the item has been added to favorites
+            alert("Item added to favorites!");
+        } else {
+            // Provide feedback to the user that the item already exists in favorites
+            alert("Item already exists in favorites!");
+        }
+    } else {
+        // If localStorage is not supported, alert the user
+        alert("Sorry, your browser does not support Web Storage...");
+    }
+}
+
+function checkAuthentication() {
+        const userexist = localStorage.getItem("user");
+        if (userexist) {
+          return true;
+        } else {
+          return false;
+        }
+}
+
+
+function Add(buttonId) {
+  const vari = checkAuthentication()
+if(vari)
+  {
+    console.log(buttonId)
+    // Find the button corresponding to the provided ID
+    const addToFavoritesButton = document.getElementById(buttonId);
+   
+    addToFavoritesButton.addEventListener('click', function(event) {
+        // Find the closest item container
+        const itemContainer = event.target.closest('.item');
+        if (itemContainer) {
+            // Find the title and description elements within the item container
+            const titleElement = itemContainer.querySelector('h3');
+            const descriptionElement = itemContainer.querySelector('p');
+            // Check if title and description elements exist
+            if (titleElement && descriptionElement) {
+                // Extract title and description text
+                const itemTitle = titleElement.textContent.trim();
+                const itemDescription = descriptionElement.textContent.trim();
+                // Call the saveToFavorites function with the extracted data
+                saveToFavorites(itemTitle, itemDescription);
+                // Optionally, provide feedback to the user that the item has been added to favorites
+                window.location.href="/favoritelist.html"
+            }
+        }
+    });
+  }
+  else{
+    alert("please login")
+    window.location.href="/login.html"
+  }
+ 
+}
+
+// // Add unique IDs to each "Add to Favorites" button
+// document.querySelectorAll('.Add-to-favorites').forEach((button, index) => {
+//     const buttonId = `addButton${index}`;
+//     button.id = buttonId;
+//     // Call the Add function with the unique button ID
+//     Add(buttonId);
+// });
+
+
+  // Add JavaScript function to truncate text in <p> tag to 100 characters
+    const movieDescription = document.getElementById('movieDescription');
+    if (movieDescription.textContent.length > 100) {
+        movieDescription.textContent = movieDescription.textContent.substring(0, 10) + '...';
+    }
+
+    </script>
+  
+
+
+
+
+
+
+    <script>
+      // Check if the "user" key exists in localStorage
+const userLoggedIn = localStorage.getItem("user");
+
+// Get the SignUp and Logout links from the navigation bar
+const signUpLink = document.getElementById("signupLink");
+const logoutLink = document.getElementById("logoutLink");
+
+if (userLoggedIn) {
+  // User is logged in, show the Logout link and hide the SignUp link
+  signUpLink.style.display = "none";
+  logoutLink.style.display = "block";
+} else {
+  // User is not logged in, show the SignUp link and hide the Logout link
+  signUpLink.style.display = "block";
+  logoutLink.style.display = "none";
+}
+
+
+function ClearUser(){
+  // Remove a specific item from localStorage
+localStorage.removeItem('user');
+alert("logout successfull")
+
+}
+      </script>
+</body>
+</html> 

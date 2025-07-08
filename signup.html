@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+    <script src="firebaseCconfig.js"></script>
+    <script src="sign.js"></script>
+    
+    <nav class="navbar">
+        
+        <div class="left">  <a href="index.html"> <img src="./img/logo1.jpg"/>  </a>
+        </div>
+            <div class="right">
+      <ul>
+        <li>
+            <a href = "index.html" ><h4>Home</h4></a>
+
+        </li>
+        <li>
+            <a href = "genre.html" ><h4>Genre</h4></a>
+
+        </li>
+        <li>
+            <a href = "search.html" ><h4>Search</h4></a>
+
+        </li>
+        <li>
+            <a href = "favoritelist.html" ><h4>Favourite</h4></a>
+  
+          </li>
+          <li>
+              <a href = "aboutus.html" ><h4>About Us</h4></a>
+  
+          </li>
+        </ul>
+    </div>
+  </nav>
+</head>
+<body>
+    <div class = "container">
+        <h2>Sign up </h2>
+        <div id="signupForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter password" required>
+            <button id="signup" onclick="signUp()"> SIGN_UP</button>
+            <p id="error" class="error-msg"></p>
+            <hr>
+            
+            <h3>ALREADY HAVE AN ACCOUNT ? <a href="login.html">LOGIN</a></h3>
+       </div>
+    </div>
+
+    <footer>
+        <div class="fcontainer">
+            <div class="contact-info">
+                <div class="contact-person">
+                    <h3 >For more projects and enquiries:</h3>
+                    <p > Email: tommaranshul300@gmail.com</p>
+                    <a href="https://www.linkedin.com/in/anshul-tomar-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> linkedin: Anshul</a>
+                    <p >Phone: 99770359878 </p>
+                </div>
+                <div class="contact-person">
+                    <h3 >For more projects and promotions:</h3>
+                    <p >Email: ambikachaudhary29@gmail.com</p>
+                    <a href="https://www.linkedin.com/in/ambika-choudhary-619964277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> linkedin: Ambika</a>
+                    <p > Phone: 7879456368 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Favorites</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        background: url(img/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .navbar a {
+        color: var(--bg-color);
+        font-size: var(--p-font);
+        font-weight: 500;
+        padding: 10px 22px;
+        border-radius: 4px;
+        transition: ease 0.4s;
+      }
+      .navbar a:hover {
+        background: var(--bg-color);
+        color: var(--text-color);
+        box-shadow: 5px 5px 5px rgb(85 85 85 / 20%);
+        border-radius: 4px;
+      }
+
+      .navbar {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        top: 0%;
+        z-index: 600;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #670000;
+      }
+
+      .navbar ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar ul li {
+        list-style: none;
+        margin: 10px 23px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+
+      .navbar ul li a:hover {
+        text-decoration: none;
+        color: #ffffff;
+        border: #7a0303;
+      }
+
+      .left img {
+        width: 40%;
+        margin-left: 2rem;
+        border-radius: 35%;
+      }
+      .left img:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+
+      .pagetitle {
+        text-align: center; /* Align the text horizontally to the center */
+        margin-top: 7%; /* Center the element horizontally */
+      }
+
+      #favorites-table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      #favorites-table th,
+      #favorites-table td {
+        border: 1px solid #dddddd;
+        padding: 12px;
+        text-align: left;
+      }
+
+      #favorites-table th {
+        background-color: #f2f2f2;
+      }
+
+      #favorites-table td button {
+        padding: 6px 12px;
+        background-color: rgba(24, 69, 202, 0.884);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #favorites-table td button:hover {
+        background-color: rgba(139, 34, 34, 0.982);
+      }
+
+      #favorites-table td button:focus {
+        outline: none;
+      }
+
+      /* Responsive styles  */
+      @media (max-width: 768px) {
+        #favorites-table {
+          width: 90%;
+        }
+      }
+
+      /* Hover effect on table rows */
+      #favorites-table tbody tr:hover {
+        background-color: #f2f2f2;
+      }
+
+      footer {
+        background-color: #5b0b0bcc;
+        color: #dcbfbf;
+        padding: 1px 0;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        margin-top: auto;
+        bottom: 0%;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        align-self: auto;
+      }
+
+      .contact-person {
+        margin: 0 90px;
+        border-right: 1rem;
+        justify-content: right;
+        border-left: #0d0e0e;
+      }
+
+      .contact-person h3 {
+        margin-bottom: 0 20px;
+        border-right: #0d0e0e;
+        justify-content: left;
+      }
+    </style>
+
+    <nav class="navbar">
+      <div class="left">
+        <a href="index.html"> <img src="./img/logo1.jpg" /> </a>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <a href="index.html"><h4>Home</h4></a>
+          </li>
+          <li>
+            <a href="genre.html"><h4>Genre</h4></a>
+          </li>
+          <li>
+            <a href="search.html"><h4>Search</h4></a>
+          </li>
+          <li>
+            <a href="aboutus.html"><h4>About Us</h4></a>
+          </li>
+          <li>
+            <a href="login.html" onclick="ClearUser()"><h4>LogOut</h4></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </head>
+  <body>
+    <div class="pagetitle">
+      <h1>Your Favourite's Section</h1>
+    </div>
+    <table id="favorites-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="favorites-body"></tbody>
+    </table>
+
+    <footer>
+      <div class="fcontainer">
+        <div class="contact-info">
+          <div class="contact-person">
+            <h3>For more projects and enquiries:</h3>
+            <p>Email: tommaranshul300@gmail.com</p>
+            <a
+              href="https://www.linkedin.com/in/anshul-tomar-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            >
+              linkedin: Anshul</a
+            >
+            <p>Phone: 99770359878</p>
+          </div>
+          <div class="contact-person">
+            <h3>For more projects and promotions:</h3>
+            <p>Email: ambikachaudhary29@gmail.com</p>
+            <a
+              href="https://www.linkedin.com/in/ambika-choudhary-619964277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            >
+              linkedin: Ambika</a
+            >
+            <p>Phone: 7879456368</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+
+    <script>
+      // Initialize Firebase
+
+      const firebaseApp = firebase.initializeApp({
+        apiKey: "AIzaSyDwIB20guA6AvlioCWLja8KaTX0jDg5GrA",
+        authDomain: "auth-form-95b9b.firebaseapp.com",
+        projectId: "auth-form-95b9b",
+        storageBucket: "auth-form-95b9b.appspot.com",
+        messagingSenderId: "412491590562",
+        appId: "1:412491590562:web:fb8c4b6d2211a7ae84a0fb", // Your Firebase configuration
+      });
+
+      // Function to check authentication status using Firebase
+      function checkAuthentication() {
+        const userexist = localStorage.getItem("user");
+        if (userexist) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      // Function to display favorites in table
+      function displayFavorites(fav) {
+        const favoritesTable = document.getElementById("favorites-body");
+
+        // Clear table body before adding new rows
+        favoritesTable.innerHTML = "";
+
+        // Loop through favorites array and create table rows
+        fav.forEach((movie, index) => {
+          const row = document.createElement("tr");
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          deleteButton.addEventListener("click", () => deleteFavorite(index));
+          const cell = document.createElement("td");
+          cell.appendChild(deleteButton);
+          row.innerHTML = `
+                    <td>${movie.title}</td>
+                    <td>${movie.description}</td>
+                `;
+          row.appendChild(cell);
+          favoritesTable.appendChild(row);
+        });
+      }
+
+
+// Function to delete a favorite item by index
+function deleteFavorite(index) {
+  // Retrieve favorites array from local storage
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // Remove the item at the specified index from the favorites array
+  favorites.splice(index, 1);
+
+  // Update the favorites array in local storage
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  // Call displayFavorites to update the displayed favorites list
+  displayFavorites(favorites);
+}
+
+
+
+
+      function showifuserexist() {
+        const exists = checkAuthentication();
+
+        if (exists) {
+          // Retrieve data from localStorage
+          const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+          // Call the displayFavorites function to show favorites on page load
+          displayFavorites(favorites); // Pass the favorites array to the function
+        } else {
+          // User is not authenticated, you can redirect them to the login or signup page
+          window.location.href = "login.html"; // Change 'login.html' to your actual login page URL
+        }
+      }
+
+      showifuserexist();
+
+      function ClearUser(){
+  // Remove a specific item from localStorage
+localStorage.removeItem('user');
+alert("logout successfull")
+
+}
+    </script>
+  </body>
+</html>
