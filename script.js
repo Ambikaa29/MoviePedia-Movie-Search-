@@ -13,6 +13,7 @@ const data = await res.json();
 if (data.Response == "True") displayMovieList(data.Search);
 }
 
+//find movie
 function findMovies() {
 let searchTerm = (movieSearchBox.value).trim();
 if (searchTerm.length > 0) {
